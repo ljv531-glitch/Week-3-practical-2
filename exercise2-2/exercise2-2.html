@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDM1 - W3P2 - Exercise 2.2</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../lib/main-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../lib/libraries/p5.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Exercise 2.2</h1>
+    <p>Your sketch:</p>
+    <div class="guidance">
+        <h2>Instructions</h2>
+        <div>
+            <p>Open <strong>exercise2-2/sketch.js</strong>, add <code>setup()</code> and <code>draw()</code> and create a 600 
+            x 600 canvas. What the video below that shows the expected output. Focus on how each circle moves in relation to 
+            the mouse. The yellow circle follows the mouse cursor but the other circles "mirror" the mouse movement on one or 
+            both axes. <em>Mirror</em> is not a technical term, it's just the word I'm using to describe the effect.</p>
+            <p>Add a function named <code>mirrorCoordinate</code> that takes one parameter called <code>coordinate</code>, representing 
+                a single coordinate (either x or y). The function will return a number, the mirrored version of the coordinate.</p>
+            <p>Fill in the function. You'll need to work out the maths yourself but here's a tip: if <code>coordinate</code> is N pixels 
+            away from one side of the canvas, its mirror is N pixels away from the opposite side. So, taking into account the size of 
+            the canvas, if <code>coordinate</code> is 20, your function should return 580. Your function should ideally only contain one, maybe two 
+            lines of code.
+            </p>
+            <p>Now you're ready to complete your <code>draw()</code> function. Draw four circles and use the 
+            <code>mirrorCoordinate()</code> function to calculate the position of each circle. Feel free to choose different 
+            colours and/or make your circles a different size than the video shows.</p>
+            <p>When you are done, check your work using <a href="./check-exercise2-2.html">check-exercise2-2.html</a>.</p>
+            <p>Expected output:</p>
+            <p>
+                <video width="600" height="600" controls>
+                    <source src="./assets/exercise2-2.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                 </video>
+            </p>
+        </div>
+        <div>
+            <button class="btn btn-primary hint" type="button" data-bs-toggle="collapse" data-bs-target="#hint" aria-expanded="false" aria-controls="hint">
+                Hint
+            </button>
+            <div class="collapse" id="hint">
+                <div class="card card-body">
+                    <p>The maths for <code>mirrorCoordinate()</code> is very, very simple. Try not to overthink it!</p>
+                    <p>Try to work out how / when to use <code>mirrorCoordinate()</code> to implement this sketch on your own 
+                    but here's some more guidance if you get stuck:</p>
+                    <ul>
+                        <li>One circle uses the raw, unmirrored location of the mouse.</li>
+                        <li>One circle mirrors <code>mouseX</code> AND <code>mouseY</code>.</li>
+                        <li>Two circles mirror only one of the mouse coordinates and use the raw mouse 
+                            coordinate for the other axis.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>

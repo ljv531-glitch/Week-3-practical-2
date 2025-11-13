@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDM1 - W3P2 - Exercise 1.1</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../lib/main-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../lib/libraries/p5.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Exercise 1.1</h1>
+    <p>Your sketch:</p>
+    <div class="guidance">
+        <h2>Instructions</h2>
+        <div>
+            <p>The code in <strong>exercise1-1/sketch.js</strong> creates a star shape using five triangles.</p>
+            <p>Write a function called <code>star</code> and move the code that creates the star inside the new function. Call 
+            your new function from <code>draw()</code> and make sure the star appears as before.</p>
+            <p>Next, modify the <code>star()</code> function so that it takes two arguments representing the star's location. Edit 
+            the code for the star so that it draws the star at the arguments rather than the canvas centre. 
+            Modify <code>draw()</code> so that three stars are drawn at random locations.</p>
+            <p>When you are done, check your work using <a href="./check-exercise1-1.html">check-exercise1-1.html</a>.</p>
+            <p>Expected output:</p>
+            <p>
+               <img src="./assets/exercise1-1.png" width="400px" height="300px" alt="Three stars at random locations">
+            </p>
+        </div>
+        <div>
+            <button class="btn btn-primary hint" type="button" data-bs-toggle="collapse" data-bs-target="#hint" aria-expanded="false" aria-controls="hint">
+                Hint
+            </button>
+            <div class="collapse" id="hint">
+                <div class="card card-body">
+                    <p>If you're not sure how to create your own function, consult the slides.
+                    </p>
+                    <p>To get modify the star code so that it draws at the location provided by 
+                        the arguments, notice that every point of the triangles that make up the 
+                        star is relative to the centre of the canvas. Replace each instance of <code>width / 2</code> with 
+                        the argument that represents the x coordinate of the star and replace each 
+                        instance of <code>height / 2</code> with the argument that represents the y coordinate 
+                        of the star.
+                    </p>
+                    <p>You will need global variables for each coordinate of each star. These variables should be initialised with a random 
+                        value in <code>setup()</code> then the variables should be passed to <code>star()</code> in <code>draw()</code>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
